@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">My Application</string>
+    <string name="label_main_fragment">Character Sheets</string>
+</resources>

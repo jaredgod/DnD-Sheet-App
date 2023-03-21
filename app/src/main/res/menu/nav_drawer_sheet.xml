@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/combat_page"
+        android:title="@string/label_combat_page"/>
+    <item
+        android:id="@+id/stat_page"
+        android:title="@string/label_stat_page"/>
+    <item
+        android:id="@+id/spell_class_page"
+        android:title="@string/label_spell_page"/>
+    <item
+        android:id="@+id/inventory_page"
+        android:title="@string/label_inventory_page"/>
+    <item
+        android:id="@+id/note_page"
+        android:title="@string/label_note_page"/>
+
+</menu>

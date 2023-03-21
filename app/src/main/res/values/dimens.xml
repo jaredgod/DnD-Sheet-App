@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="mono_stat_width_large">90dp</dimen>
+    <dimen name="mono_stat_width_medium">70dp</dimen>
+    <dimen name="mono_stat_width_small">40dp</dimen>
+    <dimen name="margin">7dp</dimen>
+    <dimen name="text_stat_content_large">50sp</dimen>
+    <dimen name="text_stat_content_medium">35sp</dimen>
+    <dimen name="text_stat_content_small">20sp</dimen>
+    <dimen name="text_stat_label">13sp</dimen>
+    <dimen name="skill_bonus_height">50dp</dimen>
+    <dimen name="skill_bonus_width">30dp</dimen>
+    <dimen name="text_skill_bonus">15sp</dimen>
+    <dimen name="text_add">30sp</dimen>
+    <dimen name="text_dialog">30sp</dimen>
+</resources>

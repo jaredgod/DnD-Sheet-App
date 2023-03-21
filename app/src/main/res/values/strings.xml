@@ -1,4 +1,50 @@
 <resources>
-    <string name="app_name">My Application</string>
+    <string name="app_name">DnD Character Sheets</string>
+
     <string name="label_main_fragment">Character Sheets</string>
+
+    <string name="label_combat_page">Combat</string>
+    <string name="label_stat_page">Stats</string>
+    <string name="label_sheet_list_page">Character Sheets</string>
+    <string name="label_inventory_page">Inventory</string>
+    <string name="label_note_page">Notes</string>
+    <string name="label_spell_page">Spell Classes</string>
+    <string name="label_spell_list_page">Spells</string>
+
+    <string name="label_initiative">Initiative</string>
+    <string name="label_armor_class">Armor Class</string>
+    <string name="label_spell_attack_bonus">Spell Attack Bonus</string>
+    <string name="label_speed">Speed</string>
+
+    <string name="label_strength">Strength</string>
+    <string name="label_dexterity">Dexterity</string>
+    <string name="label_constitution">Constitution</string>
+    <string name="label_intelligence">Intelligence</string>
+    <string name="label_wisdom">Wisdom</string>
+    <string name="label_charisma">Charisma</string>
+    <string name="label_hit_dice">Hit Dice</string>
+    <string name="label_health">Hit Points</string>
+    <string name="label_level">\nLevel</string>
+    <string name="label_proficiency_bonus">Proficiency Bonus</string>
+
+    <string name="label_skills">Skills</string>
+
+    <string name="label_acrobatics">Acrobatics (Dex)</string>
+    <string name="label_animal_handling">Animal Handling (Wis)</string>
+    <string name="label_arcana">Arcana (Int)</string>
+    <string name="label_athletics">Athletics (Str)</string>
+    <string name="label_deception">Deception (Cha)</string>
+    <string name="label_history">History (Int)</string>
+    <string name="label_insight">Insight (Wis)</string>
+    <string name="label_intimidation">Intimidation (Cha)</string>
+    <string name="label_investigation">Investigation (Int)</string>
+    <string name="label_medicine">Medicine (Wis)</string>
+    <string name="label_nature">Nature (Int)</string>
+    <string name="label_perception">Perception (Wis)</string>
+    <string name="label_performance">Performance (Cha)</string>
+    <string name="label_persuasion">Persuasion (Cha)</string>
+    <string name="label_religion">Religion (Int)</string>
+    <string name="label_sleight_of_hand">Sleight of Hand (Dex)</string>
+    <string name="label_stealth">Stealth (Dex)</string>
+    <string name="label_survival">Survival (Wis)</string>
 </resources>

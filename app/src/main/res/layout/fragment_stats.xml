@@ -1,0 +1,1063 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cl_stats"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_margin="@dimen/margin"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cl_level_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            >
+
+            <TextView
+                android:id="@+id/tv_level"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/label_level"
+                android:textSize="@dimen/text_stat_label"
+                android:gravity="center"
+                app:layout_constraintTop_toTopOf="parent"/>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/cl_level"
+                android:layout_height="@dimen/mono_stat_width_medium"
+                android:layout_width="@dimen/mono_stat_width_medium"
+                android:background="@drawable/box_stat_medium"
+                android:gravity="center"
+                app:layout_constraintTop_toBottomOf="@id/tv_level"
+                app:layout_constraintLeft_toLeftOf="parent"
+                >
+
+                <EditText
+                    android:id="@+id/et_level"
+                    android:layout_height="match_parent"
+                    android:layout_width="match_parent"
+                    android:inputType="number"
+                    android:gravity="center"
+                    android:textSize="@dimen/text_stat_content_medium"
+                    android:background="#00000000"
+                    android:imeOptions="actionDone"
+                    app:layout_constraintTop_toTopOf="parent"/>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cl_proficiency_bonus_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toEndOf="@id/cl_level_layout"
+            >
+
+            <TextView
+                android:id="@+id/tv_proficiency_bonus"
+                android:layout_width="@dimen/mono_stat_width_medium"
+                android:layout_height="wrap_content"
+                android:text="@string/label_proficiency_bonus"
+                android:textSize="@dimen/text_stat_label"
+                android:gravity="center"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"/>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/cl_proficiency_bonus"
+                android:layout_height="@dimen/mono_stat_width_medium"
+                android:layout_width="@dimen/mono_stat_width_medium"
+                android:background="@drawable/box_stat_medium"
+                android:gravity="center"
+                app:layout_constraintTop_toBottomOf="@id/tv_proficiency_bonus"
+                app:layout_constraintLeft_toLeftOf="parent"
+                >
+
+                <EditText
+                    android:id="@+id/et_proficiency_bonus"
+                    android:layout_height="match_parent"
+                    android:layout_width="match_parent"
+                    android:inputType="number"
+                    android:gravity="center"
+                    android:textSize="@dimen/text_stat_content_medium"
+                    android:background="#00000000"
+                    android:imeOptions="actionDone"
+                    app:layout_constraintTop_toTopOf="parent"/>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cl_strength_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/cl_level_layout"
+            >
+
+            <TextView
+                android:id="@+id/tv_strength"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/label_strength"
+                android:textSize="@dimen/text_stat_label"
+                android:gravity="center"
+                app:layout_constraintTop_toTopOf="parent"/>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/cl_strength"
+                android:layout_height="@dimen/mono_stat_width_medium"
+                android:layout_width="@dimen/mono_stat_width_medium"
+                android:background="@drawable/box_stat_medium"
+                android:gravity="center"
+                app:layout_constraintTop_toBottomOf="@id/tv_strength"
+                app:layout_constraintLeft_toLeftOf="parent"
+                >
+
+                <EditText
+                    android:id="@+id/et_strength"
+                    android:layout_height="match_parent"
+                    android:layout_width="match_parent"
+                    android:inputType="number"
+                    android:gravity="center"
+                    android:textSize="@dimen/text_stat_content_medium"
+                    android:background="#00000000"
+                    android:imeOptions="actionDone"
+                    app:layout_constraintTop_toTopOf="parent"/>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_height="@dimen/mono_stat_width_small"
+                android:layout_width="@dimen/mono_stat_width_small"
+                android:background="@drawable/box_stat_small"
+                android:gravity="center"
+                app:layout_constraintLeft_toRightOf="@id/cl_strength"
+                app:layout_constraintTop_toTopOf="@id/cl_strength"
+                app:layout_constraintBottom_toBottomOf="@id/cl_strength"
+                >
+
+                <EditText
+                    android:id="@+id/et_strength_mod"
+                    android:layout_height="match_parent"
+                    android:layout_width="match_parent"
+                    android:inputType="number"
+                    android:gravity="center"
+                    android:textSize="@dimen/text_stat_content_small"
+                    android:background="#00000000"
+                    android:imeOptions="actionDone"
+                    app:layout_constraintTop_toTopOf="parent"/>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cl_dexterity_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/cl_strength_layout"
+            >
+
+            <TextView
+                android:id="@+id/tv_dexterity"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/label_dexterity"
+                android:textSize="@dimen/text_stat_label"
+                android:gravity="center"
+                app:layout_constraintTop_toTopOf="parent"/>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/cl_dexterity"
+                android:layout_height="@dimen/mono_stat_width_medium"
+                android:layout_width="@dimen/mono_stat_width_medium"
+                android:background="@drawable/box_stat_medium"
+                android:gravity="center"
+                app:layout_constraintTop_toBottomOf="@id/tv_dexterity"
+                app:layout_constraintLeft_toLeftOf="parent"
+                >
+
+                <EditText
+                    android:id="@+id/et_dexterity"
+                    android:layout_height="match_parent"
+                    android:layout_width="match_parent"
+                    android:inputType="number"
+                    android:gravity="center"
+                    android:textSize="@dimen/text_stat_content_medium"
+                    android:background="#00000000"
+                    android:imeOptions="actionDone"
+                    app:layout_constraintTop_toTopOf="parent"/>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_height="@dimen/mono_stat_width_small"
+                android:layout_width="@dimen/mono_stat_width_small"
+                android:background="@drawable/box_stat_small"
+                android:gravity="center"
+                app:layout_constraintLeft_toRightOf="@id/cl_dexterity"
+                app:layout_constraintTop_toTopOf="@id/cl_dexterity"
+                app:layout_constraintBottom_toBottomOf="@id/cl_dexterity"
+                >
+
+                <EditText
+                    android:id="@+id/et_dexterity_mod"
+                    android:layout_height="match_parent"
+                    android:layout_width="match_parent"
+                    android:inputType="number"
+                    android:gravity="center"
+                    android:textSize="@dimen/text_stat_content_small"
+                    android:background="#00000000"
+                    android:imeOptions="actionDone"
+                    app:layout_constraintTop_toTopOf="parent"/>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cl_constitution_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/cl_dexterity_layout"
+            >
+
+            <TextView
+                android:id="@+id/tv_constitution"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/label_constitution"
+                android:textSize="@dimen/text_stat_label"
+                android:gravity="center"
+                app:layout_constraintTop_toTopOf="parent"/>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/cl_constitution"
+                android:layout_height="@dimen/mono_stat_width_medium"
+                android:layout_width="@dimen/mono_stat_width_medium"
+                android:background="@drawable/box_stat_medium"
+                android:gravity="center"
+                app:layout_constraintTop_toBottomOf="@id/tv_constitution"
+                app:layout_constraintLeft_toLeftOf="parent"
+                >
+
+                <EditText
+                    android:id="@+id/et_constitution"
+                    android:layout_height="match_parent"
+                    android:layout_width="match_parent"
+                    android:inputType="number"
+                    android:gravity="center"
+                    android:textSize="@dimen/text_stat_content_medium"
+                    android:background="#00000000"
+                    android:imeOptions="actionDone"
+                    app:layout_constraintTop_toTopOf="parent"/>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_height="@dimen/mono_stat_width_small"
+                android:layout_width="@dimen/mono_stat_width_small"
+                android:background="@drawable/box_stat_small"
+                android:gravity="center"
+                app:layout_constraintLeft_toRightOf="@id/cl_constitution"
+                app:layout_constraintTop_toTopOf="@id/cl_constitution"
+                app:layout_constraintBottom_toBottomOf="@id/cl_constitution"
+                >
+
+                <EditText
+                    android:id="@+id/et_constitution_mod"
+                    android:layout_height="match_parent"
+                    android:layout_width="match_parent"
+                    android:inputType="number"
+                    android:gravity="center"
+                    android:textSize="@dimen/text_stat_content_small"
+                    android:background="#00000000"
+                    android:imeOptions="actionDone"
+                    app:layout_constraintTop_toTopOf="parent"/>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cl_intelligence_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/cl_constitution_layout"
+            >
+
+            <TextView
+                android:id="@+id/tv_intelligence"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/label_intelligence"
+                android:textSize="@dimen/text_stat_label"
+                android:gravity="center"
+                app:layout_constraintTop_toTopOf="parent"/>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/cl_intelligence"
+                android:layout_height="@dimen/mono_stat_width_medium"
+                android:layout_width="@dimen/mono_stat_width_medium"
+                android:background="@drawable/box_stat_medium"
+                android:gravity="center"
+                app:layout_constraintTop_toBottomOf="@id/tv_intelligence"
+                app:layout_constraintLeft_toLeftOf="parent"
+                >
+
+                <EditText
+                    android:id="@+id/et_intelligence"
+                    android:layout_height="match_parent"
+                    android:layout_width="match_parent"
+                    android:inputType="number"
+                    android:gravity="center"
+                    android:textSize="@dimen/text_stat_content_medium"
+                    android:background="#00000000"
+                    android:imeOptions="actionDone"
+                    app:layout_constraintTop_toTopOf="parent"/>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_height="@dimen/mono_stat_width_small"
+                android:layout_width="@dimen/mono_stat_width_small"
+                android:background="@drawable/box_stat_small"
+                android:gravity="center"
+                app:layout_constraintLeft_toRightOf="@id/cl_intelligence"
+                app:layout_constraintTop_toTopOf="@id/cl_intelligence"
+                app:layout_constraintBottom_toBottomOf="@id/cl_intelligence"
+                >
+
+                <EditText
+                    android:id="@+id/et_intelligence_mod"
+                    android:layout_height="match_parent"
+                    android:layout_width="match_parent"
+                    android:inputType="number"
+                    android:gravity="center"
+                    android:textSize="@dimen/text_stat_content_small"
+                    android:background="#00000000"
+                    android:imeOptions="actionDone"
+                    app:layout_constraintTop_toTopOf="parent"/>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cl_wisdom_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/cl_intelligence_layout"
+            >
+
+            <TextView
+                android:id="@+id/tv_wisdom"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/label_wisdom"
+                android:textSize="@dimen/text_stat_label"
+                android:gravity="center"
+                app:layout_constraintTop_toTopOf="parent"/>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/cl_wisdom"
+                android:layout_height="@dimen/mono_stat_width_medium"
+                android:layout_width="@dimen/mono_stat_width_medium"
+                android:background="@drawable/box_stat_medium"
+                android:gravity="center"
+                app:layout_constraintTop_toBottomOf="@id/tv_wisdom"
+                app:layout_constraintLeft_toLeftOf="parent"
+                >
+
+                <EditText
+                    android:id="@+id/et_wisdom"
+                    android:layout_height="match_parent"
+                    android:layout_width="match_parent"
+                    android:inputType="number"
+                    android:gravity="center"
+                    android:textSize="@dimen/text_stat_content_medium"
+                    android:background="#00000000"
+                    android:imeOptions="actionDone"
+                    app:layout_constraintTop_toTopOf="parent"/>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_height="@dimen/mono_stat_width_small"
+                android:layout_width="@dimen/mono_stat_width_small"
+                android:background="@drawable/box_stat_small"
+                android:gravity="center"
+                app:layout_constraintLeft_toRightOf="@id/cl_wisdom"
+                app:layout_constraintTop_toTopOf="@id/cl_wisdom"
+                app:layout_constraintBottom_toBottomOf="@id/cl_wisdom"
+                >
+
+                <EditText
+                    android:id="@+id/et_wisdom_mod"
+                    android:layout_height="match_parent"
+                    android:layout_width="match_parent"
+                    android:inputType="number"
+                    android:gravity="center"
+                    android:textSize="@dimen/text_stat_content_small"
+                    android:background="#00000000"
+                    android:imeOptions="actionDone"
+                    app:layout_constraintTop_toTopOf="parent"/>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cl_charisma_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/cl_wisdom_layout"
+            >
+
+            <TextView
+                android:id="@+id/tv_charisma"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/label_charisma"
+                android:textSize="@dimen/text_stat_label"
+                android:gravity="center"
+                app:layout_constraintTop_toTopOf="parent"/>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/cl_charisma"
+                android:layout_height="@dimen/mono_stat_width_medium"
+                android:layout_width="@dimen/mono_stat_width_medium"
+                android:background="@drawable/box_stat_medium"
+                android:gravity="center"
+                app:layout_constraintTop_toBottomOf="@id/tv_charisma"
+                app:layout_constraintLeft_toLeftOf="parent"
+                >
+
+                <EditText
+                    android:id="@+id/et_charisma"
+                    android:layout_height="match_parent"
+                    android:layout_width="match_parent"
+                    android:inputType="number"
+                    android:gravity="center"
+                    android:textSize="@dimen/text_stat_content_medium"
+                    android:background="#00000000"
+                    android:imeOptions="actionDone"
+                    app:layout_constraintTop_toTopOf="parent"/>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_height="@dimen/mono_stat_width_small"
+                android:layout_width="@dimen/mono_stat_width_small"
+                android:background="@drawable/box_stat_small"
+                android:gravity="center"
+                app:layout_constraintLeft_toRightOf="@id/cl_charisma"
+                app:layout_constraintTop_toTopOf="@id/cl_charisma"
+                app:layout_constraintBottom_toBottomOf="@id/cl_charisma"
+                >
+
+                <EditText
+                    android:id="@+id/et_charisma_mod"
+                    android:layout_height="match_parent"
+                    android:layout_width="match_parent"
+                    android:inputType="number"
+                    android:gravity="center"
+                    android:textSize="@dimen/text_stat_content_small"
+                    android:background="#00000000"
+                    android:imeOptions="actionDone"
+                    app:layout_constraintTop_toTopOf="parent"/>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout android:id="@+id/cl_skill_list"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_margin="@dimen/margin"
+        app:layout_constraintStart_toEndOf="@+id/cl_stats"
+        app:layout_constraintEnd_toEndOf="parent" >
+
+        <TextView
+            android:id="@+id/tv_skills"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/label_skills"
+            android:textSize="@dimen/text_stat_label"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <androidx.constraintlayout.widget.ConstraintLayout android:id="@+id/cl_acrobatics"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            app:layout_constraintTop_toBottomOf="@id/tv_skills" >
+
+            <CheckBox android:id="@+id/checkbox_acrobatics"
+                android:layout_width="40dp"
+                android:layout_height="20dp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <EditText android:id="@+id/et_acrobatics"
+                android:layout_height="@dimen/skill_bonus_height"
+                android:layout_width="@dimen/skill_bonus_width"
+                android:inputType="number"
+                android:gravity="center_horizontal|bottom"
+                android:textSize="@dimen/text_skill_bonus"
+                android:imeOptions="actionDone"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@id/checkbox_acrobatics"/>
+
+            <TextView android:id="@+id/tv_acrobatics"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/label_acrobatics"
+                android:textSize="@dimen/text_stat_label"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toEndOf="@id/et_acrobatics"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout android:id="@+id/cl_animal_handling"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            app:layout_constraintTop_toBottomOf="@id/cl_acrobatics" >
+
+            <CheckBox android:id="@+id/checkbox_animal_handling"
+                android:layout_width="40dp"
+                android:layout_height="20dp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <EditText android:id="@+id/et_animal_handling"
+                android:layout_height="@dimen/skill_bonus_height"
+                android:layout_width="@dimen/skill_bonus_width"
+                android:inputType="number"
+                android:gravity="center_horizontal|bottom"
+                android:textSize="@dimen/text_skill_bonus"
+                android:imeOptions="actionDone"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@id/checkbox_animal_handling"/>
+
+            <TextView android:id="@+id/tv_animal_handling"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/label_animal_handling"
+                android:textSize="@dimen/text_stat_label"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toEndOf="@id/et_animal_handling"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout android:id="@+id/cl_arcana"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            app:layout_constraintTop_toBottomOf="@id/cl_animal_handling" >
+
+            <CheckBox android:id="@+id/checkbox_arcana"
+                android:layout_width="40dp"
+                android:layout_height="20dp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <EditText android:id="@+id/et_arcana"
+                android:layout_height="@dimen/skill_bonus_height"
+                android:layout_width="@dimen/skill_bonus_width"
+                android:inputType="number"
+                android:gravity="center_horizontal|bottom"
+                android:textSize="@dimen/text_skill_bonus"
+                android:imeOptions="actionDone"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@id/checkbox_arcana"/>
+
+            <TextView android:id="@+id/tv_arcana"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/label_arcana"
+                android:textSize="@dimen/text_stat_label"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toEndOf="@id/et_arcana"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout android:id="@+id/cl_athletics"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            app:layout_constraintTop_toBottomOf="@id/cl_arcana" >
+
+            <CheckBox android:id="@+id/checkbox_athletics"
+                android:layout_width="40dp"
+                android:layout_height="20dp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <EditText android:id="@+id/et_athletics"
+                android:layout_height="@dimen/skill_bonus_height"
+                android:layout_width="@dimen/skill_bonus_width"
+                android:inputType="number"
+                android:gravity="center_horizontal|bottom"
+                android:textSize="@dimen/text_skill_bonus"
+                android:imeOptions="actionDone"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@id/checkbox_athletics"/>
+
+            <TextView android:id="@+id/tv_athletics"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/label_athletics"
+                android:textSize="@dimen/text_stat_label"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toEndOf="@id/et_athletics"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout android:id="@+id/cl_deception"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            app:layout_constraintTop_toBottomOf="@id/cl_athletics" >
+
+            <CheckBox android:id="@+id/checkbox_deception"
+                android:layout_width="40dp"
+                android:layout_height="20dp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <EditText android:id="@+id/et_deception"
+                android:layout_height="@dimen/skill_bonus_height"
+                android:layout_width="@dimen/skill_bonus_width"
+                android:inputType="number"
+                android:gravity="center_horizontal|bottom"
+                android:textSize="@dimen/text_skill_bonus"
+                android:imeOptions="actionDone"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@id/checkbox_deception"/>
+
+            <TextView android:id="@+id/tv_deception"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/label_deception"
+                android:textSize="@dimen/text_stat_label"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toEndOf="@id/et_deception"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout android:id="@+id/cl_history"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            app:layout_constraintTop_toBottomOf="@id/cl_deception" >
+
+            <CheckBox android:id="@+id/checkbox_history"
+                android:layout_width="40dp"
+                android:layout_height="20dp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <EditText android:id="@+id/et_history"
+                android:layout_height="@dimen/skill_bonus_height"
+                android:layout_width="@dimen/skill_bonus_width"
+                android:inputType="number"
+                android:gravity="center_horizontal|bottom"
+                android:textSize="@dimen/text_skill_bonus"
+                android:imeOptions="actionDone"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@id/checkbox_history"/>
+
+            <TextView android:id="@+id/tv_history"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/label_history"
+                android:textSize="@dimen/text_stat_label"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toEndOf="@id/et_history"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout android:id="@+id/cl_insight"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            app:layout_constraintTop_toBottomOf="@id/cl_history" >
+
+            <CheckBox android:id="@+id/checkbox_insight"
+                android:layout_width="40dp"
+                android:layout_height="20dp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <EditText android:id="@+id/et_insight"
+                android:layout_height="@dimen/skill_bonus_height"
+                android:layout_width="@dimen/skill_bonus_width"
+                android:inputType="number"
+                android:gravity="center_horizontal|bottom"
+                android:textSize="@dimen/text_skill_bonus"
+                android:imeOptions="actionDone"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@id/checkbox_insight"/>
+
+            <TextView android:id="@+id/tv_insight"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/label_insight"
+                android:textSize="@dimen/text_stat_label"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toEndOf="@id/et_insight"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout android:id="@+id/cl_intimidation"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            app:layout_constraintTop_toBottomOf="@id/cl_insight" >
+
+            <CheckBox android:id="@+id/checkbox_intimidation"
+                android:layout_width="40dp"
+                android:layout_height="20dp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <EditText android:id="@+id/et_intimidation"
+                android:layout_height="@dimen/skill_bonus_height"
+                android:layout_width="@dimen/skill_bonus_width"
+                android:inputType="number"
+                android:gravity="center_horizontal|bottom"
+                android:textSize="@dimen/text_skill_bonus"
+                android:imeOptions="actionDone"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@id/checkbox_intimidation"/>
+
+            <TextView android:id="@+id/tv_intimidation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/label_intimidation"
+                android:textSize="@dimen/text_stat_label"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toEndOf="@id/et_intimidation"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout android:id="@+id/cl_investigation"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            app:layout_constraintTop_toBottomOf="@id/cl_intimidation" >
+
+            <CheckBox android:id="@+id/checkbox_investigation"
+                android:layout_width="40dp"
+                android:layout_height="20dp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <EditText android:id="@+id/et_investigation"
+                android:layout_height="@dimen/skill_bonus_height"
+                android:layout_width="@dimen/skill_bonus_width"
+                android:inputType="number"
+                android:gravity="center_horizontal|bottom"
+                android:textSize="@dimen/text_skill_bonus"
+                android:imeOptions="actionDone"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@id/checkbox_investigation"/>
+
+            <TextView android:id="@+id/tv_investigation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/label_investigation"
+                android:textSize="@dimen/text_stat_label"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toEndOf="@id/et_investigation"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout android:id="@+id/cl_medicine"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            app:layout_constraintTop_toBottomOf="@id/cl_investigation" >
+
+            <CheckBox android:id="@+id/checkbox_medicine"
+                android:layout_width="40dp"
+                android:layout_height="20dp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <EditText android:id="@+id/et_medicine"
+                android:layout_height="@dimen/skill_bonus_height"
+                android:layout_width="@dimen/skill_bonus_width"
+                android:inputType="number"
+                android:gravity="center_horizontal|bottom"
+                android:textSize="@dimen/text_skill_bonus"
+                android:imeOptions="actionDone"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@id/checkbox_medicine"/>
+
+            <TextView android:id="@+id/tv_medicine"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/label_medicine"
+                android:textSize="@dimen/text_stat_label"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toEndOf="@id/et_medicine"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout android:id="@+id/cl_nature"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            app:layout_constraintTop_toBottomOf="@id/cl_medicine" >
+
+            <CheckBox android:id="@+id/checkbox_nature"
+                android:layout_width="40dp"
+                android:layout_height="20dp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <EditText android:id="@+id/et_nature"
+                android:layout_height="@dimen/skill_bonus_height"
+                android:layout_width="@dimen/skill_bonus_width"
+                android:inputType="number"
+                android:gravity="center_horizontal|bottom"
+                android:textSize="@dimen/text_skill_bonus"
+                android:imeOptions="actionDone"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@id/checkbox_nature"/>
+
+            <TextView android:id="@+id/tv_nature"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/label_nature"
+                android:textSize="@dimen/text_stat_label"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toEndOf="@id/et_nature"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout android:id="@+id/cl_perception"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            app:layout_constraintTop_toBottomOf="@id/cl_nature" >
+
+            <CheckBox android:id="@+id/checkbox_perception"
+                android:layout_width="40dp"
+                android:layout_height="20dp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <EditText android:id="@+id/et_perception"
+                android:layout_height="@dimen/skill_bonus_height"
+                android:layout_width="@dimen/skill_bonus_width"
+                android:inputType="number"
+                android:gravity="center_horizontal|bottom"
+                android:textSize="@dimen/text_skill_bonus"
+                android:imeOptions="actionDone"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@id/checkbox_perception"/>
+
+            <TextView android:id="@+id/tv_perception"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/label_perception"
+                android:textSize="@dimen/text_stat_label"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toEndOf="@id/et_perception"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout android:id="@+id/cl_performance"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            app:layout_constraintTop_toBottomOf="@id/cl_perception" >
+
+            <CheckBox android:id="@+id/checkbox_performance"
+                android:layout_width="40dp"
+                android:layout_height="20dp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <EditText android:id="@+id/et_performance"
+                android:layout_height="@dimen/skill_bonus_height"
+                android:layout_width="@dimen/skill_bonus_width"
+                android:inputType="number"
+                android:gravity="center_horizontal|bottom"
+                android:textSize="@dimen/text_skill_bonus"
+                android:imeOptions="actionDone"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@id/checkbox_performance"/>
+
+            <TextView android:id="@+id/tv_performance"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/label_performance"
+                android:textSize="@dimen/text_stat_label"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toEndOf="@id/et_performance"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout android:id="@+id/cl_persuasion"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            app:layout_constraintTop_toBottomOf="@id/cl_performance" >
+
+            <CheckBox android:id="@+id/checkbox_persuasion"
+                android:layout_width="40dp"
+                android:layout_height="20dp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <EditText android:id="@+id/et_persuasion"
+                android:layout_height="@dimen/skill_bonus_height"
+                android:layout_width="@dimen/skill_bonus_width"
+                android:inputType="number"
+                android:gravity="center_horizontal|bottom"
+                android:textSize="@dimen/text_skill_bonus"
+                android:imeOptions="actionDone"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@id/checkbox_persuasion"/>
+
+            <TextView android:id="@+id/tv_persuasion"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/label_persuasion"
+                android:textSize="@dimen/text_stat_label"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toEndOf="@id/et_persuasion"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout android:id="@+id/cl_religion"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            app:layout_constraintTop_toBottomOf="@id/cl_persuasion" >
+
+            <CheckBox android:id="@+id/checkbox_religion"
+                android:layout_width="40dp"
+                android:layout_height="20dp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <EditText android:id="@+id/et_religion"
+                android:layout_height="@dimen/skill_bonus_height"
+                android:layout_width="@dimen/skill_bonus_width"
+                android:inputType="number"
+                android:gravity="center_horizontal|bottom"
+                android:textSize="@dimen/text_skill_bonus"
+                android:imeOptions="actionDone"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@id/checkbox_religion"/>
+
+            <TextView android:id="@+id/tv_religion"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/label_religion"
+                android:textSize="@dimen/text_stat_label"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toEndOf="@id/et_religion"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout android:id="@+id/cl_sleight_of_hand"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            app:layout_constraintTop_toBottomOf="@id/cl_religion" >
+
+            <CheckBox android:id="@+id/checkbox_sleight_of_hand"
+                android:layout_width="40dp"
+                android:layout_height="20dp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <EditText android:id="@+id/et_sleight_of_hand"
+                android:layout_height="@dimen/skill_bonus_height"
+                android:layout_width="@dimen/skill_bonus_width"
+                android:inputType="number"
+                android:gravity="center_horizontal|bottom"
+                android:textSize="@dimen/text_skill_bonus"
+                android:imeOptions="actionDone"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@id/checkbox_sleight_of_hand"/>
+
+            <TextView android:id="@+id/tv_sleight_of_hand"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/label_sleight_of_hand"
+                android:textSize="@dimen/text_stat_label"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toEndOf="@id/et_sleight_of_hand"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout android:id="@+id/cl_stealth"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            app:layout_constraintTop_toBottomOf="@id/cl_sleight_of_hand" >
+
+            <CheckBox android:id="@+id/checkbox_stealth"
+                android:layout_width="40dp"
+                android:layout_height="20dp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <EditText android:id="@+id/et_stealth"
+                android:layout_height="@dimen/skill_bonus_height"
+                android:layout_width="@dimen/skill_bonus_width"
+                android:inputType="number"
+                android:gravity="center_horizontal|bottom"
+                android:textSize="@dimen/text_skill_bonus"
+                android:imeOptions="actionDone"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@id/checkbox_stealth"/>
+
+            <TextView android:id="@+id/tv_stealth"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/label_stealth"
+                android:textSize="@dimen/text_stat_label"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toEndOf="@id/et_stealth"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout android:id="@+id/cl_survival"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            app:layout_constraintTop_toBottomOf="@id/cl_stealth" >
+
+            <CheckBox android:id="@+id/checkbox_survival"
+                android:layout_width="40dp"
+                android:layout_height="20dp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <EditText android:id="@+id/et_survival"
+                android:layout_height="@dimen/skill_bonus_height"
+                android:layout_width="@dimen/skill_bonus_width"
+                android:inputType="number"
+                android:gravity="center_horizontal|bottom"
+                android:textSize="@dimen/text_skill_bonus"
+                android:imeOptions="actionDone"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@id/checkbox_survival"/>
+
+            <TextView android:id="@+id/tv_survival"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/label_survival"
+                android:textSize="@dimen/text_stat_label"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toEndOf="@id/et_survival"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

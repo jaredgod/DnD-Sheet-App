@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_map_sheet"
+    app:startDestination="@id/character_list_page">
+
+    <fragment
+        android:id="@+id/character_list_page"
+        android:name="com.example.dndapp.ui.fragments.CharacterListFragment"
+        android:label="@string/label_sheet_list_page">
+        <action
+            android:id="@+id/navigate_to_combat_Page"
+            app:destination="@id/combat_page" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/combat_page"
+        android:name="com.example.dndapp.ui.fragments.CombatFragment"
+        android:label="@string/label_combat_page">
+        <argument
+            android:name="sheet"
+            app:argType="com.example.dndapp.data.SheetItemData" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/inventory_page"
+        android:name="com.example.dndapp.ui.fragments.InventoryFragment"
+        android:label="@string/label_inventory_page">
+        <argument
+            android:name="sheet"
+            app:argType="com.example.dndapp.data.SheetItemData" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/note_page"
+        android:name="com.example.dndapp.ui.fragments.NoteFragment"
+        android:label="@string/label_note_page">
+        <argument
+            android:name="sheet"
+            app:argType="com.example.dndapp.data.SheetItemData" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/spell_class_page"
+        android:name="com.example.dndapp.ui.fragments.SpellClassFragment"
+        android:label="@string/label_spell_page">
+        <argument
+            android:name="sheet"
+            app:argType="com.example.dndapp.data.SheetItemData" />
+        <action
+            android:id="@+id/navigate_to_spell_list_page"
+            app:destination="@id/spell_list_page" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/stat_page"
+        android:name="com.example.dndapp.ui.fragments.StatFragment"
+        android:label="@string/label_stat_page">
+        <argument
+            android:name="sheet"
+            app:argType="com.example.dndapp.data.SheetItemData" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/spell_list_page"
+        android:name="com.example.dndapp.ui.fragments.SpellListFragment"
+        android:label="@string/label_spell_list_page">
+        <argument
+            android:name="sheet"
+            app:argType="com.example.dndapp.data.SheetItemData" />
+        <argument
+            android:name="spellClass"
+            app:argType="com.example.dndapp.data.SpellClassItemData" />
+    </fragment>
+
+</navigation>

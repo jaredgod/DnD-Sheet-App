@@ -1,0 +1,333 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout android:id="@+id/cl_top_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" >
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cl_hit_dice_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/margin"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            >
+
+            <TextView
+                android:id="@+id/tv_hit_dice"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/label_hit_dice"
+                android:textSize="@dimen/text_stat_label"
+                android:gravity="center"
+                app:layout_constraintTop_toTopOf="parent"/>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/cl_hit_dice"
+                android:layout_height="@dimen/mono_stat_width_medium"
+                android:layout_width="@dimen/mono_stat_width_medium"
+                android:background="@drawable/box_stat_medium"
+                android:gravity="center"
+                app:layout_constraintTop_toBottomOf="@id/tv_hit_dice"
+                app:layout_constraintLeft_toLeftOf="parent"
+                >
+
+                <EditText
+                    android:id="@+id/et_hit_dice"
+                    android:layout_height="match_parent"
+                    android:layout_width="match_parent"
+                    android:inputType="number"
+                    android:gravity="center"
+                    android:textSize="@dimen/text_stat_content_medium"
+                    android:background="#00000000"
+                    android:imeOptions="actionDone"
+                    app:layout_constraintTop_toTopOf="parent"/>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_height="@dimen/mono_stat_width_small"
+                android:layout_width="@dimen/mono_stat_width_small"
+                android:background="@drawable/box_stat_small"
+                android:gravity="center"
+                app:layout_constraintLeft_toRightOf="@id/cl_hit_dice"
+                app:layout_constraintTop_toTopOf="@id/cl_hit_dice"
+                app:layout_constraintBottom_toBottomOf="@id/cl_hit_dice"
+                >
+
+                <EditText
+                    android:id="@+id/et_hit_dice_max"
+                    android:layout_height="match_parent"
+                    android:layout_width="match_parent"
+                    android:inputType="number"
+                    android:gravity="center"
+                    android:textSize="@dimen/text_stat_content_small"
+                    android:background="#00000000"
+                    android:imeOptions="actionDone"
+                    app:layout_constraintTop_toTopOf="parent"/>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cl_health_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/margin"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/cl_hit_dice_layout"
+            >
+
+            <TextView
+                android:id="@+id/tv_health"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/label_health"
+                android:textSize="@dimen/text_stat_label"
+                android:gravity="center"
+                app:layout_constraintTop_toTopOf="parent"/>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/cl_health"
+                android:layout_height="@dimen/mono_stat_width_medium"
+                android:layout_width="@dimen/mono_stat_width_medium"
+                android:background="@drawable/box_stat_medium"
+                android:gravity="center"
+                app:layout_constraintTop_toBottomOf="@id/tv_health"
+                app:layout_constraintLeft_toLeftOf="parent"
+                >
+
+                <EditText
+                    android:id="@+id/et_health"
+                    android:layout_height="match_parent"
+                    android:layout_width="match_parent"
+                    android:inputType="number"
+                    android:gravity="center"
+                    android:textSize="@dimen/text_stat_content_medium"
+                    android:background="#00000000"
+                    android:imeOptions="actionDone"
+                    app:layout_constraintTop_toTopOf="parent"/>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_height="@dimen/mono_stat_width_small"
+                android:layout_width="@dimen/mono_stat_width_small"
+                android:background="@drawable/box_stat_small"
+                android:gravity="center"
+                app:layout_constraintLeft_toRightOf="@id/cl_health"
+                app:layout_constraintTop_toTopOf="@id/cl_health"
+                app:layout_constraintBottom_toBottomOf="@id/cl_health"
+                >
+
+                <EditText
+                    android:id="@+id/et_health_max"
+                    android:layout_height="match_parent"
+                    android:layout_width="match_parent"
+                    android:inputType="number"
+                    android:gravity="center"
+                    android:textSize="@dimen/text_stat_content_small"
+                    android:background="#00000000"
+                    android:imeOptions="actionDone"
+                    app:layout_constraintTop_toTopOf="parent"/>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout android:id="@+id/cl_weapon_list"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:gravity="center_horizontal|top"
+        app:layout_constraintTop_toBottomOf="@+id/cl_top_bar"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/cl_stats"
+        app:layout_constraintStart_toStartOf="parent" >
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_weapon_list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="@dimen/margin"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout android:id="@+id/cl_stats"
+        android:layout_width="@dimen/mono_stat_width_large"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_margin="@dimen/margin"
+        app:layout_constraintTop_toBottomOf="@+id/cl_top_bar"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cl_armor_class"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            >
+
+            <TextView
+                android:id="@+id/tv_armor_class"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/label_armor_class"
+                android:textSize="@dimen/text_stat_label"
+                android:gravity="center"
+                app:layout_constraintTop_toTopOf="parent"/>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_height="@dimen/mono_stat_width_large"
+                android:layout_width="match_parent"
+                android:background="@drawable/box_stat_large"
+                android:gravity="center"
+                app:layout_constraintTop_toBottomOf="@id/tv_armor_class"
+                >
+
+                <EditText
+                    android:id="@+id/et_armor_class"
+                    android:layout_height="match_parent"
+                    android:layout_width="match_parent"
+                    android:inputType="number"
+                    android:gravity="center"
+                    android:textSize="@dimen/text_stat_content_large"
+                    android:background="#00000000"
+                    android:imeOptions="actionDone"
+                    app:layout_constraintTop_toTopOf="parent"/>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cl_initiative"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/cl_armor_class"
+            >
+
+            <TextView
+                android:id="@+id/tv_initiative"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/label_initiative"
+                android:textSize="@dimen/text_stat_label"
+                android:gravity="center"
+                app:layout_constraintTop_toTopOf="parent"/>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_height="@dimen/mono_stat_width_large"
+                android:layout_width="match_parent"
+                android:background="@drawable/box_stat_large"
+                android:gravity="center"
+                app:layout_constraintTop_toBottomOf="@id/tv_initiative"
+                >
+
+                <EditText
+                    android:id="@+id/et_initiative"
+                    android:layout_height="match_parent"
+                    android:layout_width="match_parent"
+                    android:inputType="number"
+                    android:gravity="center"
+                    android:textSize="@dimen/text_stat_content_large"
+                    android:background="#00000000"
+                    android:imeOptions="actionDone"
+                    app:layout_constraintTop_toTopOf="parent"/>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cl_speed"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/cl_initiative"
+            >
+
+            <TextView
+                android:id="@+id/tv_speed"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/label_speed"
+                android:textSize="@dimen/text_stat_label"
+                android:gravity="center"
+                app:layout_constraintTop_toTopOf="parent"/>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_height="@dimen/mono_stat_width_large"
+                android:layout_width="match_parent"
+                android:background="@drawable/box_stat_large"
+                android:gravity="center"
+                app:layout_constraintTop_toBottomOf="@id/tv_speed"
+                >
+
+                <EditText
+                    android:id="@+id/et_speed"
+                    android:layout_height="match_parent"
+                    android:layout_width="match_parent"
+                    android:inputType="number"
+                    android:gravity="center"
+                    android:textSize="@dimen/text_stat_content_large"
+                    android:background="#00000000"
+                    android:imeOptions="actionDone"
+                    app:layout_constraintTop_toTopOf="parent"/>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cl_spell_attack_bonus"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/cl_speed"
+            >
+
+            <TextView
+                android:id="@+id/tv_spell_attack_bonus"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/label_spell_attack_bonus"
+                android:textSize="@dimen/text_stat_label"
+                android:gravity="center"
+                app:layout_constraintTop_toTopOf="parent"/>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_height="@dimen/mono_stat_width_large"
+                android:layout_width="match_parent"
+                android:background="@drawable/box_stat_large"
+                android:gravity="center"
+                app:layout_constraintTop_toBottomOf="@id/tv_spell_attack_bonus"
+                >
+
+                <EditText
+                    android:id="@+id/et_spell_attack_bonus"
+                    android:layout_height="match_parent"
+                    android:layout_width="match_parent"
+                    android:inputType="number"
+                    android:gravity="center"
+                    android:textSize="@dimen/text_stat_content_large"
+                    android:background="#00000000"
+                    android:imeOptions="actionDone"
+                    app:layout_constraintTop_toTopOf="parent"/>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

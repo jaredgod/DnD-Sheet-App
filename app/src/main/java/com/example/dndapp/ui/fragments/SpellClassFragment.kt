@@ -10,9 +10,8 @@ import androidx.navigation.fragment.navArgs
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.dndapp.R
-import com.example.dndapp.data.SheetItemData
 import com.example.dndapp.ui.adapters.SpellClassItemAdapter
-import com.example.dndapp.data.SpellClassItemData
+import com.example.dndapp.data.item.SpellClassItemData
 import com.example.dndapp.ui.viewmodels.SheetViewModel
 import com.google.android.material.bottomnavigation.BottomNavigationView
 

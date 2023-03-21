@@ -1,9 +1,9 @@
-package com.example.dndapp.data
+package com.example.dndapp.data.item
 
 import androidx.room.Entity
 
 @Entity
-class SpellItemData (
+data class EquipmentItemData (
     val name: String,
     val ind: Int
 ) : java.io.Serializable

@@ -2,11 +2,11 @@ package com.example.dndapp.ui.viewmodels
 
 import android.app.Application
 import androidx.lifecycle.AndroidViewModel
-import androidx.lifecycle.LiveData
 import androidx.lifecycle.asLiveData
 import androidx.lifecycle.viewModelScope
-import com.example.dndapp.data.SheetItemData
+import com.example.dndapp.data.item.SheetItemData
 import com.example.dndapp.data.db.*
+import com.example.dndapp.data.db.update.*
 import com.example.dndapp.db.AppDatabase
 import com.example.dndapp.db.SavedSheetsRepository
 import kotlinx.coroutines.launch
@@ -45,6 +45,18 @@ class SheetViewModel(application: Application): AndroidViewModel(application) {
         update.name = currentSheet?.name ?: ""
         viewModelScope.launch {
             repository.updateSheet(update)
+        }
+    }
+
+    fun updateEquipment(update: EquipmentUpdateData){
+        viewModelScope.launch {
+            repository.updateEquipment(update)
+        }
+    }
+
+    fun updateSpell(update: SpellUpdateData){
+        viewModelScope.launch {
+            repository.updateSpell(update)
         }
     }
 

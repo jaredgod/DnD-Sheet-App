@@ -2,11 +2,10 @@ package com.example.dndapp.db
 
 import androidx.room.*
 import androidx.room.OnConflictStrategy.Companion.IGNORE
-import androidx.room.OnConflictStrategy.Companion.REPLACE
 import com.example.dndapp.data.db.CharacterSheetData
-import com.example.dndapp.data.db.SheetCombatUpdateData
-import com.example.dndapp.data.db.SheetNoteUpdateData
-import com.example.dndapp.data.db.SheetStatUpdateData
+import com.example.dndapp.data.db.update.SheetCombatUpdateData
+import com.example.dndapp.data.db.update.SheetNoteUpdateData
+import com.example.dndapp.data.db.update.SheetStatUpdateData
 import kotlinx.coroutines.flow.Flow
 
 @Dao

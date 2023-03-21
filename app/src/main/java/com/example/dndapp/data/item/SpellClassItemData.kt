@@ -1,4 +1,4 @@
-package com.example.dndapp.data
+package com.example.dndapp.data.item
 
 class SpellClassItemData (
     val name: String,

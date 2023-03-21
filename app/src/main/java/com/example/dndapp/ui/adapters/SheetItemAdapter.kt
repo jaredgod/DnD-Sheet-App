@@ -7,8 +7,7 @@ import android.widget.Button
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.dndapp.R
-import com.example.dndapp.data.EquipmentItemData
-import com.example.dndapp.data.SheetItemData
+import com.example.dndapp.data.item.SheetItemData
 
 class SheetItemAdapter (
     private val onSelect: (SheetItemData) -> Unit,

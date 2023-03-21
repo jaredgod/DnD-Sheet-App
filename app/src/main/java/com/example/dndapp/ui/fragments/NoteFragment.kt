@@ -1,16 +1,13 @@
 package com.example.dndapp.ui.fragments
 
 import android.os.Bundle
-import android.text.Editable
-import android.text.TextWatcher
-import android.util.Log
 import android.view.View
 import android.widget.EditText
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.navArgs
 import com.example.dndapp.R
-import com.example.dndapp.data.db.SheetNoteUpdateData
+import com.example.dndapp.data.db.update.SheetNoteUpdateData
 import com.example.dndapp.ui.viewmodels.SheetViewModel
 import com.google.android.material.bottomnavigation.BottomNavigationView
 

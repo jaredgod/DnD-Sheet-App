@@ -3,7 +3,6 @@ package com.example.dndapp.ui.fragments
 import android.os.Bundle
 import android.view.View
 import android.widget.EditText
-import androidx.core.os.bundleOf
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
@@ -11,14 +10,12 @@ import androidx.navigation.fragment.navArgs
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.dndapp.R
-import com.example.dndapp.data.EquipmentItemData
 import com.example.dndapp.ui.adapters.WeaponItemAdapter
-import com.example.dndapp.data.WeaponItemData
-import com.example.dndapp.data.db.SheetCombatUpdateData
-import com.example.dndapp.data.db.SheetStatUpdateData
+import com.example.dndapp.data.item.WeaponItemData
+import com.example.dndapp.data.db.update.SheetCombatUpdateData
+import com.example.dndapp.data.item.EquipmentItemData
 import com.example.dndapp.ui.viewmodels.SheetViewModel
 import com.google.android.material.bottomnavigation.BottomNavigationView
-import com.google.android.material.navigation.NavigationBarView
 
 class CombatFragment : Fragment(R.layout.fragment_combat) {
 
@@ -96,7 +93,10 @@ class CombatFragment : Fragment(R.layout.fragment_combat) {
     }
 
     private fun onWeaponItemClicked(weaponItemData: WeaponItemData) {
-
+        val directions = CombatFragmentDirections.navigateToEquipmentDetailsPage(
+            EquipmentItemData(weaponItemData.name, weaponItemData.ind)
+        )
+        findNavController().navigate(directions)
     }
 
     override fun onPause() {

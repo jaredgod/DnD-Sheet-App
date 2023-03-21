@@ -1,6 +1,7 @@
 package com.example.dndapp.db
 
 import com.example.dndapp.data.db.*
+import com.example.dndapp.data.db.update.*
 
 class SavedSheetsRepository (
     private val sheetDao: SheetDao,
@@ -24,6 +25,7 @@ class SavedSheetsRepository (
     // equipment
     suspend fun insertEquipment(repo: EquipmentDetailsData) = equipmentDao.insert(repo)
     suspend fun deleteEquipment(index: Int) = equipmentDao.deleteEquipment(index)
+    suspend fun updateEquipment(obj: EquipmentUpdateData) = equipmentDao.update(obj)
 
     fun getAllEquipment(sheetName: String) = equipmentDao.getAllEquipment(sheetName)
     fun getAllWeapons(sheetName: String) = equipmentDao.getAllWeapons(sheetName)
@@ -32,6 +34,7 @@ class SavedSheetsRepository (
     // spells
     suspend fun insertSpell(repo: SpellDetailsData) = spellDao.insert(repo)
     suspend fun deleteSpell(index: Int) = spellDao.deleteSpell(index)
+    suspend fun updateSpell(obj: SpellUpdateData) = spellDao.update(obj)
 
     fun getAllSpells(sheetName: String, spellClass: Int) = spellDao.getAllSpells(sheetName, spellClass)
     fun getSpellByIndex(index: Int) = spellDao.getSpellByIndex(index)

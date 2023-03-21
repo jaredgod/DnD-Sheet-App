@@ -6,7 +6,7 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.dndapp.R
-import com.example.dndapp.data.SpellClassItemData
+import com.example.dndapp.data.item.SpellClassItemData
 
 class SpellClassItemAdapter (private val onClick: (SpellClassItemData) -> Unit)
     : RecyclerView.Adapter<SpellClassItemAdapter.ViewHolder>() {

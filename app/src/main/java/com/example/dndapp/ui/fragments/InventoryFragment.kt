@@ -8,13 +8,13 @@ import android.widget.CheckBox
 import android.widget.EditText
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
+import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.dndapp.R
 import com.example.dndapp.ui.adapters.EquipmentItemAdapter
-import com.example.dndapp.data.EquipmentItemData
-import com.example.dndapp.data.db.CharacterSheetData
+import com.example.dndapp.data.item.EquipmentItemData
 import com.example.dndapp.data.db.EquipmentDetailsData
 import com.example.dndapp.ui.viewmodels.SheetViewModel
 import com.google.android.material.bottomnavigation.BottomNavigationView
@@ -79,8 +79,9 @@ class InventoryFragment : Fragment(R.layout.fragment_inventory) {
         }
     }
 
-    private fun onInvItemSelected(weaponItemData: EquipmentItemData) {
-
+    private fun onInvItemSelected(equipmentItemData: EquipmentItemData) {
+        val directions = InventoryFragmentDirections.navigateToEquipmentDetailsPage(equipmentItemData)
+        findNavController().navigate(directions)
     }
 
     private fun onInvItemDeleted(invItemData: EquipmentItemData) {

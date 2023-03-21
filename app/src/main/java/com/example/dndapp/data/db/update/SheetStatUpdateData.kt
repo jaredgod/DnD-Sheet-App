@@ -1,6 +1,4 @@
-package com.example.dndapp.data.db
-
-import androidx.room.PrimaryKey
+package com.example.dndapp.data.db.update
 
 data class SheetStatUpdateData(
     // stats
@@ -58,7 +56,6 @@ data class SheetStatUpdateData(
     var survivalMod: Int = 0,
 )
 {
-    @PrimaryKey
     var name: String = ""
 
 }

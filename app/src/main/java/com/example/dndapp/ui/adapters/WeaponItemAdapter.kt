@@ -6,7 +6,7 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.dndapp.R
-import com.example.dndapp.data.WeaponItemData
+import com.example.dndapp.data.item.WeaponItemData
 
 class WeaponItemAdapter (private val onClick: (WeaponItemData) -> Unit)
     : RecyclerView.Adapter<WeaponItemAdapter.ViewHolder>() {

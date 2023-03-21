@@ -7,11 +7,8 @@ import android.widget.EditText
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.navArgs
-import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.recyclerview.widget.RecyclerView
 import com.example.dndapp.R
-import com.example.dndapp.data.db.SheetNoteUpdateData
-import com.example.dndapp.data.db.SheetStatUpdateData
+import com.example.dndapp.data.db.update.SheetStatUpdateData
 import com.example.dndapp.ui.viewmodels.SheetViewModel
 import com.google.android.material.bottomnavigation.BottomNavigationView
 
@@ -201,7 +198,8 @@ class StatFragment : Fragment(R.layout.fragment_stats) {
     override fun onPause() {
         super.onPause()
 
-        sheetViewModel.updateCurrentSheet(SheetStatUpdateData(
+        sheetViewModel.updateCurrentSheet(
+            SheetStatUpdateData(
             Integer.parseInt(level?.text.toString()),
             Integer.parseInt(proficiencyBonus?.text.toString()),
             Integer.parseInt(strengthVal?.text.toString()),
@@ -253,7 +251,8 @@ class StatFragment : Fragment(R.layout.fragment_stats) {
             Integer.parseInt(stealthMod?.text.toString()),
             survivalToggle?.isChecked!!,
             Integer.parseInt(survivalMod?.text.toString()),
-        ))
+        )
+        )
 
     }
 }

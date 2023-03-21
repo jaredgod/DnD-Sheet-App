@@ -19,7 +19,10 @@
         android:label="@string/label_combat_page">
         <argument
             android:name="sheet"
-            app:argType="com.example.dndapp.data.SheetItemData" />
+            app:argType="com.example.dndapp.data.item.SheetItemData" />
+        <action
+            android:id="@+id/navigate_to_equipment_details_page"
+            app:destination="@id/equipment_details_page" />
     </fragment>
 
     <fragment
@@ -28,7 +31,10 @@
         android:label="@string/label_inventory_page">
         <argument
             android:name="sheet"
-            app:argType="com.example.dndapp.data.SheetItemData" />
+            app:argType="com.example.dndapp.data.item.SheetItemData" />
+        <action
+            android:id="@+id/navigate_to_equipment_details_page"
+            app:destination="@id/equipment_details_page" />
     </fragment>
 
     <fragment
@@ -37,7 +43,7 @@
         android:label="@string/label_note_page">
         <argument
             android:name="sheet"
-            app:argType="com.example.dndapp.data.SheetItemData" />
+            app:argType="com.example.dndapp.data.item.SheetItemData" />
     </fragment>
 
     <fragment
@@ -46,7 +52,7 @@
         android:label="@string/label_spell_page">
         <argument
             android:name="sheet"
-            app:argType="com.example.dndapp.data.SheetItemData" />
+            app:argType="com.example.dndapp.data.item.SheetItemData" />
         <action
             android:id="@+id/navigate_to_spell_list_page"
             app:destination="@id/spell_list_page" />
@@ -58,7 +64,7 @@
         android:label="@string/label_stat_page">
         <argument
             android:name="sheet"
-            app:argType="com.example.dndapp.data.SheetItemData" />
+            app:argType="com.example.dndapp.data.item.SheetItemData" />
     </fragment>
 
     <fragment
@@ -67,10 +73,31 @@
         android:label="@string/label_spell_list_page">
         <argument
             android:name="sheet"
-            app:argType="com.example.dndapp.data.SheetItemData" />
+            app:argType="com.example.dndapp.data.item.SheetItemData" />
         <argument
             android:name="spellClass"
-            app:argType="com.example.dndapp.data.SpellClassItemData" />
+            app:argType="com.example.dndapp.data.item.SpellClassItemData" />
+        <action
+            android:id="@+id/navigate_to_spell_details_page"
+            app:destination="@id/spell_details_page" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/equipment_details_page"
+        android:name="com.example.dndapp.ui.fragments.EquipmentDetailsFragment"
+        android:label="@string/label_equipment_description_page">
+        <argument
+            android:name="equipment"
+            app:argType="com.example.dndapp.data.item.EquipmentItemData" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/spell_details_page"
+        android:name="com.example.dndapp.ui.fragments.SpellDetailsFragment"
+        android:label="@string/label_spell_details_page">
+        <argument
+            android:name="spell"
+            app:argType="com.example.dndapp.data.item.SpellItemData" />
     </fragment>
 
 </navigation>

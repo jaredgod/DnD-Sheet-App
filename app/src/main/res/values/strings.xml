@@ -47,4 +47,6 @@
     <string name="label_sleight_of_hand">Sleight of Hand (Dex)</string>
     <string name="label_stealth">Stealth (Dex)</string>
     <string name="label_survival">Survival (Wis)</string>
+    <string name="label_equipment_description_page">Equipment Details</string>
+    <string name="label_spell_details_page">Spell Details</string>
 </resources>

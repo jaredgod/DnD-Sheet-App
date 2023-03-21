@@ -2,7 +2,6 @@ package com.example.dndapp.ui.fragments
 
 import android.app.AlertDialog
 import android.os.Bundle
-import android.view.LayoutInflater
 import android.view.View
 import android.widget.Button
 import android.widget.EditText
@@ -14,7 +13,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.dndapp.R
 import com.example.dndapp.ui.adapters.SheetItemAdapter
-import com.example.dndapp.data.SheetItemData
+import com.example.dndapp.data.item.SheetItemData
 import com.example.dndapp.data.db.CharacterSheetData
 import com.example.dndapp.ui.viewmodels.SheetViewModel
 import com.google.android.material.bottomnavigation.BottomNavigationView

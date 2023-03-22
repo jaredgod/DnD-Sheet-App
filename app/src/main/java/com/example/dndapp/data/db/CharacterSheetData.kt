@@ -74,5 +74,5 @@ data class CharacterSheetData (
     var survivalMod: Int = 0,
 
     //notes
-    var notes: String = "test"
+    var notes: String = ""
 ) : Serializable

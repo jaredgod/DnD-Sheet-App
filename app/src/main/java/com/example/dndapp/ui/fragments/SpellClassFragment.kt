@@ -45,7 +45,6 @@ class SpellClassFragment : Fragment(R.layout.fragment_spell_class) {
         populateSpellClassList()
 
         view.findViewById<Button>(R.id.tv_online_spell_list).setOnClickListener {
-            Log.d("test", "test")
             viewOnlineSpellList()
         }
     }
@@ -73,9 +72,6 @@ class SpellClassFragment : Fragment(R.layout.fragment_spell_class) {
         if(sheet != null){
             val directions = SpellClassFragmentDirections.navigateToSpellListPage(sheet, spellClassItemData)
             findNavController().navigate(directions)
-        }
-        else{
-            Log.d("test", "Sheet Argument is Null")
         }
     }
 

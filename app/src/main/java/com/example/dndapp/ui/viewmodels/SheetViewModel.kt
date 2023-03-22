@@ -103,17 +103,13 @@ class SheetViewModel(application: Application): AndroidViewModel(application) {
     }
 
     private suspend fun fetchSpellData(name: String, sheet: String, level: Int): SpellDetailsData {
-        Log.d("test", "1")
 
         val result = apiRepository.loadSpellNames(name)
         val nameError = result.exceptionOrNull()
         val nameResponse = result.getOrNull()
 
         if(nameError == null){
-            Log.d("test", "2")
-            Log.d("test", if(nameResponse != null) "${nameResponse.count}" else "null")
             if(nameResponse != null && nameResponse.count > 0 && nameResponse.list[0].name == name){
-                Log.d("test", "3")
                 val apiIndex = nameResponse.list[0]
                 val spellDetailsResult = apiRepository.loadSpellDetails(apiIndex.index)
 
@@ -121,9 +117,7 @@ class SheetViewModel(application: Application): AndroidViewModel(application) {
                 val response = spellDetailsResult.getOrNull()
 
                 if(error == null){
-                    Log.d("test", "4")
                     if(response != null){
-                        Log.d("test", "5")
                         val details = buildSpellDetails(response)
                         val loadedLevel = response.level
                         return SpellDetailsData(sheet, loadedLevel, name, details)

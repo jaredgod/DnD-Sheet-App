@@ -284,6 +284,8 @@ class SheetViewModel(application: Application): AndroidViewModel(application) {
     fun removeSheet(sheet: String) {
         viewModelScope.launch {
             databaseRepository.deleteSheet(sheet)
+            databaseRepository.deleteSheetSpells(sheet)
+            databaseRepository.deleteSheetEquipment(sheet)
         }
     }
 

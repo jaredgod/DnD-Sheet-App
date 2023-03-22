@@ -28,6 +28,7 @@ class SavedSheetsRepository (
     // equipment
     suspend fun insertEquipment(repo: EquipmentDetailsData) = equipmentDao.insert(repo)
     suspend fun deleteEquipment(index: Int) = equipmentDao.deleteEquipment(index)
+    suspend fun deleteSheetEquipment(sheet: String) = equipmentDao.deleteSheetEquipment(sheet)
     suspend fun updateEquipment(obj: EquipmentUpdateData) = equipmentDao.update(obj)
 
     fun getAllEquipment(sheetName: String) = equipmentDao.getAllEquipment(sheetName)
@@ -37,6 +38,7 @@ class SavedSheetsRepository (
     // spells
     suspend fun insertSpell(repo: SpellDetailsData) = spellDao.insert(repo)
     suspend fun deleteSpell(index: Int) = spellDao.deleteSpell(index)
+    suspend fun deleteSheetSpells(sheet: String) = spellDao.deleteSheetSpells(sheet)
     suspend fun updateSpell(obj: SpellUpdateData) = spellDao.update(obj)
 
     fun getAllSpells(sheetName: String, spellClass: Int) = spellDao.getAllSpells(sheetName, spellClass)

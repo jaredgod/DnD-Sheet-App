@@ -31,4 +31,7 @@ interface EquipmentDao {
     @Query("DELETE FROM EquipmentDetailsData WHERE ind = :index")
     suspend fun deleteEquipment(index: Int)
 
+    @Query("DELETE FROM EquipmentDetailsData WHERE sheet = :sheet")
+    suspend fun deleteSheetEquipment(sheet: String)
+
 }

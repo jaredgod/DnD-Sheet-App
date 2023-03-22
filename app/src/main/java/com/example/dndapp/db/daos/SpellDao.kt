@@ -29,4 +29,7 @@ interface SpellDao {
     @Query("DELETE FROM SpellDetailsData WHERE ind = :index")
     suspend fun deleteSpell(index: Int)
 
+    @Query("DELETE FROM SpellDetailsData WHERE sheet = :sheet")
+    suspend fun deleteSheetSpells(sheet: String)
+
 }

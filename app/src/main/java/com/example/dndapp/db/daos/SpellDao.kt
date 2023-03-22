@@ -1,4 +1,4 @@
-package com.example.dndapp.db
+package com.example.dndapp.db.daos
 
 import androidx.room.*
 import androidx.room.OnConflictStrategy.Companion.IGNORE

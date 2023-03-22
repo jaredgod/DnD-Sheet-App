@@ -1,5 +1,8 @@
 package com.example.dndapp.ui.activities
 
+import android.content.ActivityNotFoundException
+import android.content.Intent
+import android.net.Uri
 import android.os.Bundle
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
@@ -14,6 +17,7 @@ import com.example.dndapp.R
 import com.example.dndapp.ui.viewmodels.SheetViewModel
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.google.android.material.navigation.NavigationBarView
+import com.google.android.material.snackbar.Snackbar
 
 const val SHEET_INFORMATION = "com.example.android.lifecycleweather.SHEET_INFORMATION"
 

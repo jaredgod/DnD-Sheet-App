@@ -7,6 +7,9 @@ import androidx.room.RoomDatabase
 import com.example.dndapp.data.db.CharacterSheetData
 import com.example.dndapp.data.db.EquipmentDetailsData
 import com.example.dndapp.data.db.SpellDetailsData
+import com.example.dndapp.db.daos.EquipmentDao
+import com.example.dndapp.db.daos.SheetDao
+import com.example.dndapp.db.daos.SpellDao
 
 @Database(entities = [CharacterSheetData::class, EquipmentDetailsData::class, SpellDetailsData::class], version = 1)
 abstract class AppDatabase: RoomDatabase() {

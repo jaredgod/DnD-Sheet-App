@@ -4,45 +4,25 @@
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto">
-    <androidx.constraintlayout.widget.ConstraintLayout android:id="@+id/cl_dialog"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:layout_constraintTop_toTopOf="parent" >
-        <EditText android:id="@+id/et_dialog"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:background="#ffffff"
-            android:textSize="@dimen/text_dialog"
-            android:layout_marginStart="3dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toStartOf="@id/b_dialog" >
-        </EditText>
-        <Button android:id="@+id/b_dialog"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textSize="@dimen/text_add"
-            android:text="+"
-            android:layout_marginEnd="3dp"
-            android:backgroundTint="#108C19"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"/>
-    </androidx.constraintlayout.widget.ConstraintLayout>
-    <CheckBox android:id="@+id/cb_dialog"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@id/cl_dialog"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"/>
-    <TextView
+    <EditText android:id="@+id/et_dialog"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:text="Weapon?"
-        app:layout_constraintTop_toBottomOf="@id/cl_dialog"
+        android:background="#ffffff"
+        android:textSize="@dimen/text_dialog"
+        android:layout_marginStart="3dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toEndOf="@id/cb_dialog"
-        app:layout_constraintEnd_toEndOf="parent"
-        />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/b_dialog" >
+    </EditText>
+    <Button android:id="@+id/b_dialog"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/text_add"
+        android:text="+"
+        android:layout_marginEnd="3dp"
+        android:backgroundTint="#108C19"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
 </androidx.constraintlayout.widget.ConstraintLayout>

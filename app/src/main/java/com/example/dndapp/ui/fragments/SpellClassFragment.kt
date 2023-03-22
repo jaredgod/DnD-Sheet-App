@@ -1,8 +1,11 @@
 package com.example.dndapp.ui.fragments
 
+import android.content.Intent
+import android.net.Uri
 import android.os.Bundle
 import android.util.Log
 import android.view.View
+import android.widget.Button
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
@@ -40,6 +43,11 @@ class SpellClassFragment : Fragment(R.layout.fragment_spell_class) {
         spellClassListRV.adapter = spellClassItemAdapter
 
         populateSpellClassList()
+
+        view.findViewById<Button>(R.id.tv_online_spell_list).setOnClickListener {
+            Log.d("test", "test")
+            viewOnlineSpellList()
+        }
     }
 
     private fun populateSpellClassList() {
@@ -69,5 +77,10 @@ class SpellClassFragment : Fragment(R.layout.fragment_spell_class) {
         else{
             Log.d("test", "Sheet Argument is Null")
         }
+    }
+
+    private fun viewOnlineSpellList() {
+        val browserIntent = Intent(Intent.ACTION_VIEW, Uri.parse("http://dnd5e.wikidot.com/spells"))
+        startActivity(browserIntent)
     }
 }

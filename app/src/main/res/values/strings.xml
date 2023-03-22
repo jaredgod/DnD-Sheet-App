@@ -49,4 +49,5 @@
     <string name="label_survival">Survival (Wis)</string>
     <string name="label_equipment_description_page">Equipment Details</string>
     <string name="label_spell_details_page">Spell Details</string>
+    <string name="online_spell_list">View Online Spell List</string>
 </resources>

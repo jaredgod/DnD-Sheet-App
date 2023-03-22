@@ -1,13 +1,11 @@
-package com.example.dndapp.db
+package com.example.dndapp.db.daos
 
 import androidx.room.*
 import androidx.room.OnConflictStrategy.Companion.IGNORE
-import com.example.dndapp.data.db.CharacterSheetData
 import com.example.dndapp.data.item.EquipmentItemData
 import com.example.dndapp.data.item.WeaponItemData
 import com.example.dndapp.data.db.EquipmentDetailsData
 import com.example.dndapp.data.db.update.EquipmentUpdateData
-import com.example.dndapp.data.db.update.SheetCombatUpdateData
 import kotlinx.coroutines.flow.Flow
 
 @Dao

@@ -9,7 +9,7 @@ data class EquipmentDetailsData (
     val sheet: String,
     val name: String,
     val isWeapon: Boolean = false,
-    val details: String = "",
+    var details: String = "",
     @PrimaryKey(autoGenerate = true)
     var ind: Int = 0
 ) : Serializable

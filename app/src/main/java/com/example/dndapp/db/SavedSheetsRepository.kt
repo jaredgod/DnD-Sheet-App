@@ -2,6 +2,9 @@ package com.example.dndapp.db
 
 import com.example.dndapp.data.db.*
 import com.example.dndapp.data.db.update.*
+import com.example.dndapp.db.daos.EquipmentDao
+import com.example.dndapp.db.daos.SheetDao
+import com.example.dndapp.db.daos.SpellDao
 
 class SavedSheetsRepository (
     private val sheetDao: SheetDao,

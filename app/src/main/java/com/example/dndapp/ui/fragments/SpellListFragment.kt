@@ -1,10 +1,14 @@
 package com.example.dndapp.ui.fragments
 
 import android.app.AlertDialog
+import android.content.Intent
+import android.net.Uri
 import android.os.Bundle
+import android.util.Log
 import android.view.View
 import android.widget.Button
 import android.widget.EditText
+import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
@@ -12,9 +16,8 @@ import androidx.navigation.fragment.navArgs
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.dndapp.R
-import com.example.dndapp.ui.adapters.SpellItemAdapter
 import com.example.dndapp.data.item.SpellItemData
-import com.example.dndapp.data.db.SpellDetailsData
+import com.example.dndapp.ui.adapters.SpellItemAdapter
 import com.example.dndapp.ui.viewmodels.SheetViewModel
 import com.google.android.material.bottomnavigation.BottomNavigationView
 
@@ -65,7 +68,7 @@ class SpellListFragment : Fragment(R.layout.fragment_spell_list) {
             var alert : AlertDialog? = null
 
             alertView.findViewById<Button>(R.id.b_dialog_sheet).setOnClickListener {
-                sheetViewModel.addSpell(SpellDetailsData(args.sheet.name, args.spellClass.ind, response.text.toString()))
+                sheetViewModel.addSpell(response.text.toString(), args.sheet.name, args.spellClass.ind)
 
                 alert?.cancel()
             }

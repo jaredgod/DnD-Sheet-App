@@ -63,14 +63,10 @@ class InventoryFragment : Fragment(R.layout.fragment_inventory) {
             val response = alertView.findViewById<EditText>(R.id.et_dialog)
             response.hint = "Equipment Name"
 
-
-            val weaponCheckBox = alertView.findViewById<CheckBox>(R.id.cb_dialog)
-
             var alert : AlertDialog? = null
 
             alertView.findViewById<Button>(R.id.b_dialog).setOnClickListener {
-                sheetViewModel.addEquipment(EquipmentDetailsData(args.sheet.name, response.text.toString(), weaponCheckBox.isChecked))
-
+                sheetViewModel.addEquipment(response.text.toString(), args.sheet.name)
                 alert?.cancel()
             }
 
